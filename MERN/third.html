@@ -1,38 +1,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>2nd Logo Bar</title>
+<title>3rd Logo Bar</title>
 <style>
 * {
     margin: 0;
     padding: 0;
 }
+
 #main{
 width:80%;
 margin:auto;
 }
-#parent1{
-    width:100%;
-    min-height:200px;
-    display:flex;
-    flex-direction:row;
-    margin-top:10px;
-}
 
 
 #logodiv {
-    width: 50%;
+    width: 100%;
     background-color: lightgrey;
-    min-height: 200px;
-    line-height:200px;
+    min-height: 100px;
+    line-height:100px;
     padding-left: 20px;
     box-sizing: border-box;
     margin-bottom:10px;
 }
 
+#parent2{
+    margin-top:10px;
+    width:100%;
+    min-height:200px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+
+}
+#parent3{
+width:70%;
+display:felx;
+felx-direction:column;
+jusity-content:space-between;
+}
+
 #navdiv{
-    width: 50%;
-    background-color: lightgrey;
+    width: 30%;
+    background-color: white;
     min-height: 200px;
     line-height:200px;
     text-align:center;
@@ -40,31 +50,23 @@ margin:auto;
 
 }
 #hdiv{
-    width: 100%;
+    width: 88%;
     background-color: lightgrey;
-    min-height: 100px;
-    line-height:100px;
+    min-height: 70px;
+    line-height:70px;
     text-align:center;
     margin-bottom:10px;
+    padding :50px;
 
 }
-#parent2{
-    margin-top:10px;
-    width:100%;
-    min-height:200px;
-    display:flex;
-    flex-direction:row;
-    gap:10px;
-    justify-content:space-between;
-
-}
-.box{
+#bdiv{
     
-    width:30%;
+    width:88%;
     background-color:lightgrey;
     min-height:200px;
-line-height:200px;
-text-align:center;
+    line-height:200px;
+    text-align:center;
+    padding:50px;
 
 }
 #fotid{
@@ -81,21 +83,19 @@ line-height:100px;
 
 <body>
 <div id="main">
-<div id="parent1">
 <div id="logodiv"> Logo </div>
-<div id="navdiv"> Navigation </div>
-</div>
-
-<div id="hdiv"> Head </div>
 
 <div id="parent2">
-<div class="box"> Box1 </div>
-<div class="box"> Box2 </div>
-<div class="box"> Box3 </div>
+<div id="navdiv"> Side Bar Navigation </div>
+<div id="parent3">
+<div id="hdiv"> Header Banner </div>
+<div id="bdiv"> Body Area </div>
 </div>
+</div>
+
+
 
 <div id=fotid> Footer</div>
 </div>
-
 </body>
 </html>
