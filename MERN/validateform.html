@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>VALIDATE FORM</title>
+<script>
+    
+    function resetForm(){
+        document.getElementById("tn").value="";
+        document.getElementById("tp").value="";
+        document.getElementById("ctp").value="";
+        document.getElementById("course").value="-1";
+        document.getElementById("mr").checked=false;
+        document.getElementById("fr").checked=false;
+    }
+    function validateForm() {
+    let name = document.getElementById("tn").value;
+    let pass = document.getElementById("tp").value;
+    let cpass = document.getElementById("ctp").value;
+    let course = document.getElementById("course").value;
+    let genderM = document.getElementById("mr").checked;
+    let genderF = document.getElementById("fr").checked;
+
+    if (name === "") {
+        alert("Please enter the name");
+        return false;
+    }
+    if (pass === "") {
+        alert("Please enter password");
+        return false;
+    }
+    if (cpass === "") {
+        alert("Please enter confirm password");
+        return false;
+    }
+    if (pass !== cpass) {
+        alert("Passwords do not match!");
+        return false;
+    }
+    if (!genderM && !genderF) {
+        alert("Please select gender");
+        return false;
+    }
+    if (course === "-1") {
+        alert("Please select a course");
+        return false;
+    }
+
+    return true; 
+
+}
+</script>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form action="validateform2.html" onsubmit="return validateForm()" onreset="return resetForm()">
+
+<label>Enter the Name: </label>
+<input type="text" id="tn" name="tname">
+<br><br>
+
+<label>Enter the Password: </label>
+<input type="password" id="tp" name="pass">
+<br><br>
+
+<label>Enter the Confirm Password: </label>
+<input type="password" id="ctp" name="cpass">
+<br><br>
+
+<label>Choose the Gender: </label>
+Male <input type="radio" name="gender" value="m" id="mr">
+Female <input type="radio" name="gender" value="f" id="fr">
+<br><br>
+
+<label>Select Course: </label>
+<select id="course" name="course">
+    <option value="-1">Select Course</option>
+    <option value="c">C Language</option>
+    <option value="mern">Mern Stack</option>
+    <option value="jfs">Java Fullstack</option>
+    <option value="py">Python Language</option>
+</select>
+<br><br>
+
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+
+</form>
+
+</body>
+</html>
