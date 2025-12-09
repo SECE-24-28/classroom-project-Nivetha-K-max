@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title> process data</title>
+
+</head>
+<body>
+<h2>Student details</h2>
+
+<script type="text/javascript">
+var query=window.location.search;
+var data=new URLSearchParams(query);
+document.write("the query:" ,query,"<br>");
+document.write("the data:",data,"<br>");
+document.write("the gender is:" ,data.get("gender"));
+</script>
+</body>
+</html>
