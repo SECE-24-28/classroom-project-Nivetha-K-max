@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainfile</title>
+</head>
+<body>
+    <h1>Welcome to main page {{message}}</h1>
+    <h2>Create the data</h2>
+    <form action="/store_book" method="post">
+    Title:
+    <input type="text" name="title1">
+    Author:
+    <input type="text" name="author1">
+    <input type="submit" value="insert">
+    </form>
+    <ul>
+        {{#each mydata}}
+        <li>{{this.title}} - {{this.author}}</li>
+        {{/each}}
+
+    </ul>
+</body>
+</html>
